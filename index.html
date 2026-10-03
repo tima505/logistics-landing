@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#EDF0F3" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0D141B" media="(prefers-color-scheme: dark)">
+  <title>Грузоперевозки — Название компании</title>
+  <meta name="description" content="Автомобильные, ж/д и сборные грузоперевозки по Казахстану, СНГ и из Китая. Расчёт стоимости за 15 минут, онлайн-трекинг.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700&family=Onest:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap bar-row">
+    <a class="logo" href="#top" aria-label="На главную">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="7" width="20" height="11" rx="1" fill="var(--accent)"/><path d="M6 9v7M10 9v7M14 9v7M18 9v7" stroke="var(--on-accent)" stroke-width="1.4"/></svg>
+      </span>
+      <span class="logo-text">ЛОГОТИП<small>НАЗВАНИЕ КОМПАНИИ</small></span>
+    </a>
+    <nav class="nav" aria-label="Основная навигация">
+      <a href="#services">Услуги</a>
+      <a href="#process">Как работаем</a>
+      <a href="#calc">Расчёт</a>
+      <a href="#tracking">Трекинг</a>
+      <a href="#routes">Направления</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+    <div class="header-right">
+      <a class="header-phone" href="tel:+77000000000">+7 (700) 000-00-00</a>
+      <a class="btn btn-primary" href="#contact">Оставить заявку</a>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mnav">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 5h16M2 10h16M2 15h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="wrap mobile-nav" id="mnav">
+    <a href="#services">Услуги</a>
+    <a href="#process">Как работаем</a>
+    <a href="#calc">Расчёт стоимости</a>
+    <a href="#tracking">Трекинг груза</a>
+    <a href="#routes">Направления</a>
+    <a href="#contact">Контакты</a>
+    <div class="mnav-foot">
+      <a class="mnav-phone" href="tel:+77000000000">+7 (700) 000-00-00</a>
+      <a class="btn btn-primary" href="#contact">Оставить заявку</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow">Грузоперевозки · Казахстан · СНГ · Китай</div>
+      <h1>Доставим груз в срок. <span class="hl">Каждый километр</span> под контролем.</h1>
+      <p class="hero-lead">Автомобильные, железнодорожные и сборные перевозки с таможенным оформлением. Считаем стоимость за 15 минут, показываем машину на карте до самой выгрузки.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#calc">Рассчитать стоимость
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9h12M10 4l5 5-5 5"/></svg>
+        </a>
+        <a class="btn btn-ghost" href="#tracking">Отследить груз</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b data-count="120" data-suffix="+">120+</b><span>машин в парке</span></div>
+        <div class="stat"><b data-count="2400" data-suffix="">2 400</b><span>рейсов в год</span></div>
+        <div class="stat"><b data-count="98.6" data-dec="1" data-suffix="%">98,6%</b><span>доставок в срок</span></div>
+        <div class="stat"><b>24/7</b><span>работает диспетчерская</span></div>
+      </div>
+    </div>
+
+    <div class="map-panel" aria-label="Карта маршрутов в реальном времени">
+      <div class="map-head"><span>Сеть маршрутов</span><span class="live"><i></i>Онлайн</span></div>
+      <svg class="map-svg" viewBox="0 0 600 430" role="img" aria-label="Схема маршрутов: Москва, Актобе, Астана, Алматы, Хоргос, Шымкент, Ташкент">
+        <g id="gridlines"></g>
+        <path class="route-base" id="r5" d="M60,70 Q210,40 360,95"/>
+        <path class="route-base" id="r2" d="M60,70 Q120,120 190,150 Q270,240 330,330"/>
+        <path class="route-base" id="r3" d="M360,95 Q450,170 470,285"/>
+        <path class="route-base" id="r4" d="M255,365 Q290,340 330,330 Q330,200 360,95"/>
+        <path class="route-base" id="r1" d="M560,255 Q515,262 470,285 Q400,320 330,330"/>
+        <use href="#r5" class="route-flow"/>
+        <use href="#r2" class="route-flow"/>
+        <use href="#r3" class="route-flow"/>
+        <use href="#r4" class="route-flow"/>
+        <use href="#r1" class="route-flow hot"/>
+
+        <g id="trucks"></g>
+
+        <g class="node" transform="translate(60,70)"><circle class="ring" r="7"/><circle class="core" r="6"/><text x="12" y="-6">Москва</text><text class="code" x="12" y="5">MOW</text></g>
+        <g class="node" transform="translate(190,150)"><circle class="core" r="5"/><text x="10" y="-4">Актобе</text><text class="code" x="10" y="6">AKX</text></g>
+        <g class="node" transform="translate(360,95)"><circle class="ring" r="7" style="animation-delay:.8s"/><circle class="core" r="6"/><text x="12" y="-6">Астана</text><text class="code" x="12" y="5">NQZ</text></g>
+        <g class="node" transform="translate(470,285)"><circle class="core" r="6"/><text x="-8" y="24">Алматы</text><text class="code" x="-8" y="34">ALA</text></g>
+        <g class="node" transform="translate(560,255)"><circle class="ring" r="7" style="animation-delay:1.4s"/><circle class="core" r="6"/><text x="-26" y="-12">Хоргос</text><text class="code" x="12" y="5">KHG</text></g>
+        <g class="node" transform="translate(330,330)"><circle class="ring" r="8" style="animation-delay:.4s"/><circle class="core" r="7" style="stroke:var(--accent);stroke-width:3"/><text x="12" y="20">Шымкент</text><text class="code" x="12" y="30">CIT · ХАБ</text></g>
+        <g class="node" transform="translate(255,365)"><circle class="core" r="5"/><text x="-12" y="4" text-anchor="end">Ташкент</text><text class="code" x="-12" y="16" text-anchor="end">TAS</text></g>
+      </svg>
+      <div class="track-card" aria-live="off">
+        <div class="track-top"><b>KZ-0482-HS</b><span>● В пути</span></div>
+        <div class="track-route"><span>Хоргос</span><span>Шымкент</span></div>
+        <div class="bar"><i id="tc-bar"></i></div>
+        <div class="track-meta"><span id="tc-km">0 / 1 120 км</span><span id="tc-eta">ETA —</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONVEYOR -->
+<div class="band" aria-hidden="true">
+  <div class="wrap band-label"><span>Сортировочный терминал · линия 03</span><span>Обработано сегодня: <span id="processed">1 284</span> мест</span></div>
+  <div class="conveyor" id="conveyor"></div>
+  <div class="rollers"></div>
+</div>
+
+<!-- SERVICES -->
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="eyebrow">Услуги</div><h2>Перевозим всё, что можно упаковать, закрепить и оформить</h2></div>
+      <p>Берём на себя весь путь груза: забор со склада, консолидацию, документы, таможню и доставку до двери получателя.</p>
+    </div>
+    <div class="services">
+      <article class="svc">
+        <div class="svc-ico"><svg viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="14" width="28" height="20" rx="1"/><path d="M31 20h9l7 8v6H31z"/><circle class="wheel" cx="12" cy="38" r="4" fill="var(--surface)"/><circle class="wheel" cx="39" cy="38" r="4" fill="var(--surface)"/><path d="M12 34.5v1M39 34.5v1" stroke-width="1.5"/></svg></div>
+        <h3>Автоперевозки</h3>
+        <p>Отдельная машина под ваш груз или место в попутной. Тенты, изотермы, рефрижераторы.</p>
+        <div class="spec">FTL · LTL · до 20 т · 82 м³</div>
+      </article>
+      <article class="svc">
+        <div class="svc-ico"><svg viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="2"><g class="crate"><rect x="6" y="26" width="18" height="16"/><rect x="28" y="26" width="18" height="16"/><rect x="17" y="8" width="18" height="16"/></g><path d="M15 26v16M37 26v16M26 8v16" stroke-width="1.2"/></svg></div>
+        <h3>Сборные грузы из Китая</h3>
+        <p>Консолидируем партии на складах в Урумчи и Гуанчжоу, везём через Хоргос и Достык.</p>
+        <div class="spec">от 50 кг · еженедельные отправки</div>
+      </article>
+      <article class="svc">
+        <div class="svc-ico"><svg viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="2"><g class="train"><rect x="4" y="14" width="20" height="20" rx="2"/><rect x="27" y="14" width="20" height="20" rx="2"/><path d="M24 26h3"/></g><path d="M2 42h48M6 46h4M16 46h4M26 46h4M36 46h4M46 46h4" stroke-width="1.5"/></svg></div>
+        <h3>Ж/д перевозки</h3>
+        <p>Контейнеры 20′ и 40′, вагоны и платформы. Выгодно для тяжёлых и объёмных партий.</p>
+        <div class="spec">20′ / 40′ HC · полувагоны · платформы</div>
+      </article>
+      <article class="svc">
+        <div class="svc-ico"><svg viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="2"><g class="plane"><path d="M6 30l40-16-8 22-12-6-6 8v-10z" stroke-linejoin="round"/><path d="M26 30l20-16"/></g><path d="M4 44h16" stroke-dasharray="3 4"/></svg></div>
+        <h3>Авиадоставка</h3>
+        <p>Срочные и ценные грузы: запчасти, электроника, образцы. Встреча в аэропорту и доставка курьером.</p>
+        <div class="spec">2–5 дней · от 1 кг</div>
+      </article>
+      <article class="svc">
+        <div class="svc-ico"><svg viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="2"><rect x="8" y="6" width="28" height="36" rx="1"/><path d="M14 14h16M14 20h16M14 26h10"/><g class="stamp"><rect x="30" y="30" width="16" height="6" fill="var(--surface)"/><path d="M38 30v-8M34 22h8"/></g><path d="M30 42h16" stroke="var(--accent)" stroke-width="3"/></svg></div>
+        <h3>Таможенное оформление</h3>
+        <p>Декларации, сертификаты, коды ТН ВЭД. Брокер считает платежи до отправки, без сюрпризов на границе.</p>
+        <div class="spec">ЕАЭС · импорт · экспорт · транзит</div>
+      </article>
+      <article class="svc">
+        <div class="svc-ico"><svg viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20L26 8l22 12v24H4z" stroke-linejoin="round"/><rect x="14" y="26" width="24" height="18"/><g class="wave"><path d="M18 32h6v6h-6zM28 32h6v6h-6z" stroke-width="1.5"/></g></svg></div>
+        <h3>Складское хранение</h3>
+        <p>Тёплый склад класса B в Шымкенте: приёмка, хранение, маркировка, комплектация заказов.</p>
+        <div class="spec">4 500 м² · адресное хранение · WMS</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="sec process" id="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="eyebrow">Как работаем</div><h2>Пять шагов от заявки до выгрузки</h2></div>
+      <p>За каждым грузом закреплён менеджер. Он сообщает о каждом статусе, а вы видите машину в трекинге.</p>
+    </div>
+    <div class="road-wrap" id="road">
+      <div class="road">
+        <div class="road-fill"></div>
+        <span class="cp" style="left:0%"></span>
+        <span class="cp" style="left:25%"></span>
+        <span class="cp" style="left:50%"></span>
+        <span class="cp" style="left:75%"></span>
+        <span class="cp" style="left:100%"></span>
+        <div class="road-truck" aria-hidden="true">
+          <svg viewBox="0 0 64 34" fill="none">
+            <rect x="1" y="4" width="40" height="20" rx="1.5" fill="var(--accent)"/>
+            <path d="M8 8v12M14 8v12M20 8v12M26 8v12M32 8v12" stroke="var(--on-accent)" stroke-opacity=".35" stroke-width="1.2"/>
+            <path d="M42 10h10l8 8v6H42z" fill="var(--ink)"/>
+            <path d="M46 12h6l4 5h-10z" fill="var(--surface)" opacity=".75"/>
+            <circle class="wheel" cx="11" cy="27" r="5" fill="var(--ink)"/><circle cx="11" cy="27" r="1.8" fill="var(--surface)"/>
+            <circle class="wheel" cx="50" cy="27" r="5" fill="var(--ink)"/><circle cx="50" cy="27" r="1.8" fill="var(--surface)"/>
+            <path class="wheel" d="M11 23v8M7 27h8" stroke="var(--surface)" stroke-width=".8" opacity=".5"/>
+          </svg>
+        </div>
+      </div>
+      <div class="road-dash"></div>
+    </div>
+    <div class="steps" id="steps">
+      <div class="step"><span class="n">ШАГ 1</span><h3>Заявка</h3><p>Оставляете заявку на сайте или звоните. Уточняем груз, адреса, сроки.</p><span class="t">≈ 5 минут</span></div>
+      <div class="step"><span class="n">ШАГ 2</span><h3>Расчёт и договор</h3><p>Присылаем точную цену и маршрут. Подписываем договор онлайн.</p><span class="t">≈ 15 минут</span></div>
+      <div class="step"><span class="n">ШАГ 3</span><h3>Погрузка</h3><p>Машина приезжает к складу. Фиксируем пломбу и фото груза.</p><span class="t">в день заявки</span></div>
+      <div class="step"><span class="n">ШАГ 4</span><h3>В пути</h3><p>GPS-трекинг и статусы в мессенджер. Таможню проходим за вас.</p><span class="t">онлайн 24/7</span></div>
+      <div class="step"><span class="n">ШАГ 5</span><h3>Выгрузка</h3><p>Доставка до двери, подписанные документы и закрывающие акты.</p><span class="t">ЭСФ · CMR · акт</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section class="sec" id="calc">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="eyebrow">Калькулятор</div><h2>Узнайте стоимость перевозки за минуту</h2></div>
+      <p>Предварительный расчёт по базовым тарифам. Точную цену менеджер подтвердит после уточнения деталей.</p>
+    </div>
+    <div class="calc">
+      <form class="calc-form" id="calcForm" onsubmit="return false">
+        <div class="field">
+          <label for="c-route">Маршрут</label>
+          <select id="c-route">
+            <option value="CN-SHY">Китай (Урумчи) → Шымкент</option>
+            <option value="KHG-ALA">Хоргос → Алматы</option>
+            <option value="ALA-SHY" selected>Алматы → Шымкент</option>
+            <option value="SHY-AST">Шымкент → Астана</option>
+            <option value="SHY-TAS">Шымкент → Ташкент</option>
+            <option value="MSK-SHY">Москва → Шымкент</option>
+          </select>
+        </div>
+        <div class="field">
+          <span class="lbl" id="c-type-l">Тип груза</span>
+          <div class="chips" role="radiogroup" aria-labelledby="c-type-l">
+            <label class="chip"><input type="radio" name="ctype" id="ct-1" value="1" checked><span>Генеральный</span></label>
+            <label class="chip"><input type="radio" name="ctype" id="ct-2" value="1.2"><span>Хрупкий</span></label>
+            <label class="chip"><input type="radio" name="ctype" id="ct-3" value="1.35"><span>Рефрижератор</span></label>
+            <label class="chip"><input type="radio" name="ctype" id="ct-4" value="1.5"><span>Негабарит</span></label>
+          </div>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label for="c-kg">Вес, кг <span class="range-val" id="c-kg-v">1 500</span></label>
+            <input type="range" id="c-kg" min="50" max="20000" step="50" value="1500">
+          </div>
+          <div class="field">
+            <label for="c-m3">Объём, м³ <span class="range-val" id="c-m3-v">6</span></label>
+            <input type="range" id="c-m3" min="0.5" max="82" step="0.5" value="6">
+          </div>
+        </div>
+        <div class="toggles">
+          <label class="tg"><input type="checkbox" id="c-ins"> Страхование груза</label>
+          <label class="tg"><input type="checkbox" id="c-exp"> Срочная доставка</label>
+          <label class="tg"><input type="checkbox" id="c-door"> Забор от двери</label>
+        </div>
+      </form>
+      <div class="calc-out" aria-live="polite">
+        <div class="eyebrow">Предварительная стоимость</div>
+        <div class="mini-route"><span id="o-from">Алматы</span><span class="line"><i></i></span><span id="o-to">Шымкент</span></div>
+        <div class="price"><span id="o-price">0</span><small>₸</small></div>
+        <dl class="out-grid">
+          <div><dt>Срок</dt><dd id="o-days">—</dd></div>
+          <div><dt>Расстояние</dt><dd id="o-km">—</dd></div>
+          <div><dt>Расчётный вес</dt><dd id="o-cw">—</dd></div>
+          <div><dt>Транспорт</dt><dd id="o-tr">—</dd></div>
+        </dl>
+        <p class="note">1 м³ = 250 кг расчётного веса. Цена с НДС, без учёта таможенных платежей.</p>
+        <a class="btn btn-primary" href="#contact" id="o-cta">Зафиксировать цену
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9h12M10 4l5 5-5 5"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRACKING -->
+<section class="sec process" id="tracking">
+  <div class="wrap trk">
+    <div>
+      <div class="eyebrow">Трекинг</div>
+      <h2 style="font-size:clamp(28px,3.6vw,44px);font-weight:600;margin-top:14px">Где сейчас ваш груз</h2>
+      <p style="color:var(--muted);margin-top:16px;max-width:46ch">Введите номер накладной из договора. Статусы обновляются автоматически при каждой отметке на маршруте.</p>
+      <form class="trk-form" id="trkForm">
+        <label for="trk-in" class="mono" style="position:absolute;left:-9999px">Номер накладной</label>
+        <input type="text" id="trk-in" value="KZ-0482-HS" placeholder="KZ-0000-XX" autocomplete="off" autocapitalize="characters" spellcheck="false">
+        <button class="btn btn-primary" type="submit">Найти груз</button>
+      </form>
+      <span class="demo-tag">Демо-режим: подключите свою систему</span>
+    </div>
+    <div class="trk-panel">
+      <div class="trk-panel-head"><span>Накладная <b id="trk-no">KZ-0482-HS</b></span><span>Хоргос → Шымкент · 8,4 т · 34 м³</span></div>
+      <ol class="tl" id="tl">
+        <li><span class="dot"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M3 7l3 3 5-6"/></svg></span><div><h4>Груз принят</h4><p>Склад консолидации, Урумчи</p></div><time>28.09 · 10:12</time></li>
+        <li><span class="dot"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M3 7l3 3 5-6"/></svg></span><div><h4>Отправлен</h4><p>Пломба № 0048213, фото загружены</p></div><time>29.09 · 08:40</time></li>
+        <li><span class="dot"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M3 7l3 3 5-6"/></svg></span><div><h4>Таможня пройдена</h4><p>Пост «Хоргос», декларация выпущена</p></div><time>01.10 · 15:26</time></li>
+        <li><span class="dot"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M3 7l3 3 5-6"/></svg></span><div><h4>В пути</h4><p>Трасса A-2, район Тараза</p></div><time>03.10 · 14:05</time></li>
+        <li><span class="dot"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M3 7l3 3 5-6"/></svg></span><div><h4>Доставка получателю</h4><p>Шымкент, ожидаемое прибытие</p></div><time>04.10 · 11:00</time></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- DIRECTIONS -->
+<section class="sec" id="routes">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="eyebrow">Направления</div><h2>Регулярные маршруты и сроки в пути</h2></div>
+      <p>Отправляем по графику, поэтому сроки предсказуемы. Не нашли своё направление? Рассчитаем индивидуально.</p>
+    </div>
+    <div class="dirs">
+      <div class="dir"><h3>Китай → Казахстан</h3><div class="dir-line"><span class="a"></span><span class="mv" style="--d:6s"></span><span class="b"></span></div><div class="days">7–12<small>дней</small></div><div class="mode">Авто · Ж/д · через Хоргос, Достык</div></div>
+      <div class="dir"><h3>По Казахстану</h3><div class="dir-line"><span class="a"></span><span class="mv" style="--d:3.6s"></span><span class="b"></span></div><div class="days">1–3<small>дня</small></div><div class="mode">Авто · все областные центры</div></div>
+      <div class="dir"><h3>Казахстан ↔ Узбекистан</h3><div class="dir-line"><span class="a"></span><span class="mv" style="--d:4.2s"></span><span class="b"></span></div><div class="days">1–4<small>дня</small></div><div class="mode">Авто · через Жибек Жолы</div></div>
+      <div class="dir"><h3>Казахстан ↔ Кыргызстан</h3><div class="dir-line"><span class="a"></span><span class="mv" style="--d:3.8s"></span><span class="b"></span></div><div class="days">1–3<small>дня</small></div><div class="mode">Авто · через Кордай</div></div>
+      <div class="dir"><h3>Россия → Казахстан</h3><div class="dir-line"><span class="a"></span><span class="mv" style="--d:5.4s"></span><span class="b"></span></div><div class="days">5–9<small>дней</small></div><div class="mode">Авто · Ж/д · без таможни (ЕАЭС)</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- NUMBERS -->
+<section class="nums" aria-label="Цифры">
+  <div class="wrap nums-grid">
+    <div class="num"><b><span data-count="1.8" data-dec="1">1,8</span><em> млн</em></b><span>километров проезжает парк за год</span></div>
+    <div class="num"><b><span data-count="36000">36 000</span><em> т</em></b><span>грузов доставлено с момента основания</span></div>
+    <div class="num"><b><span data-count="850">850</span><em>+</em></b><span>постоянных клиентов: заводы, дистрибьюторы, маркетплейсы</span></div>
+    <div class="num"><b><span data-count="15">15</span><em> мин</em></b><span>на расчёт стоимости в рабочее время</span></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="eyebrow">Вопросы</div><h2>Частые вопросы</h2></div>
+      <p>Не нашли ответ? Позвоните или напишите, ответим в течение 15 минут.</p>
+    </div>
+    <div class="faq">
+      <details open><summary>Как рассчитывается стоимость перевозки?</summary><p>Цена зависит от маршрута, расчётного веса и типа груза. Расчётный вес — большее из двух значений: фактический вес или объём × 250 кг. Дополнительно учитываются страхование, срочность и забор от двери.</p></details>
+      <details><summary>Вы работаете с юрлицами и ИП?</summary><p>Да. Заключаем договор, выставляем счёт и ЭСФ, предоставляем полный пакет закрывающих документов: CMR, акт выполненных работ, счёт-фактуру.</p></details>
+      <details><summary>Что будет, если груз повредят в пути?</summary><p>Каждая перевозка застрахована в пределах ответственности перевозчика. С дополнительным страхованием возмещаем полную объявленную стоимость груза.</p></details>
+      <details><summary>Можно ли отправить небольшой груз?</summary><p>Да, сборные отправки принимаем от 50 кг. Груз едет в одной машине с другими партиями, и вы платите только за своё место.</p></details>
+      <details><summary>Помогаете с таможней при импорте из Китая?</summary><p>Наш брокер подберёт коды ТН ВЭД, рассчитает пошлины и НДС до отправки, подготовит декларацию и сопроводит выпуск груза на посту.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec process" id="contact">
+  <div class="wrap contact">
+    <div class="contact-info">
+      <div class="eyebrow">Заявка</div>
+      <h2>Расскажите, что нужно перевезти</h2>
+      <p style="color:var(--muted);max-width:44ch">Менеджер перезвонит, уточнит детали и пришлёт точный расчёт с маршрутом и сроками.</p>
+      <dl class="cinfo">
+        <div><dt>Телефон</dt><dd class="mono"><a href="tel:+77000000000">+7 (700) 000-00-00</a></dd></div>
+        <div><dt>Email</dt><dd><a href="mailto:info@example.kz">info@example.kz</a></dd></div>
+        <div><dt>Адрес</dt><dd>г. Шымкент, ул. Примерная, 1</dd></div>
+        <div><dt>Диспетчерская</dt><dd>круглосуточно</dd></div>
+      </dl>
+    </div>
+    <form class="form" id="leadForm" novalidate>
+      <div class="row2">
+        <div class="field"><label for="f-name">Имя</label><input type="text" id="f-name" placeholder="Как к вам обращаться" autocomplete="name"></div>
+        <div class="field"><label for="f-phone">Телефон</label><input type="tel" id="f-phone" placeholder="+7 (___) ___-__-__" autocomplete="tel" inputmode="tel"></div>
+      </div>
+      <div class="row2">
+        <div class="field"><label for="f-from">Откуда</label><input type="text" id="f-from" placeholder="Город отправки"></div>
+        <div class="field"><label for="f-to">Куда</label><input type="text" id="f-to" placeholder="Город доставки"></div>
+      </div>
+      <div class="field"><label for="f-msg">Груз</label><textarea id="f-msg" placeholder="Что везём, вес, объём, желаемая дата"></textarea></div>
+      <p class="err" id="f-err">Укажите имя и телефон, чтобы мы смогли перезвонить.</p>
+      <button class="btn btn-primary" type="submit">Получить расчёт
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9h12M10 4l5 5-5 5"/></svg>
+      </button>
+      <div class="sent" id="f-sent"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="9"/><path d="M7 11l3 3 5-6"/></svg>Заявка принята. Менеджер перезвонит в течение 15 минут.</div>
+      <p class="fine">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Наверх">
+      <span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="7" width="20" height="11" rx="1" fill="var(--accent)"/><path d="M6 9v7M10 9v7M14 9v7M18 9v7" stroke="var(--on-accent)" stroke-width="1.4"/></svg></span>
+      <span class="logo-text">ЛОГОТИП<small>НАЗВАНИЕ КОМПАНИИ</small></span>
+    </a>
+    <nav aria-label="Нижняя навигация">
+      <a href="#services">Услуги</a><a href="#calc">Расчёт</a><a href="#tracking">Трекинг</a><a href="#routes">Направления</a><a href="#faq">Вопросы</a>
+    </nav>
+    <small>© 2026 · БИН 000000000000</small>
+  </div>
+</footer>
+
+<!-- Mobile action bar -->
+<div class="mbar" id="mbar">
+  <a class="mbar-call" href="tel:+77000000000" aria-label="Позвонить">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>
+    Позвонить
+  </a>
+  <a class="btn btn-primary" href="#calc">Рассчитать стоимость</a>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
